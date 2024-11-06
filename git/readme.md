@@ -1,3 +1,12 @@
+Projekt malej bazy danych, odpowiadajacej za:
+- logowanie uzytkownikow
+- informacje o zawodnikach, polaczonych z druzynami i rozgrywkami
+- dane druzyn
+- rozgryweki i ich typ
+- mecze przyporzadkowane do rozgrywek i ich wynikow
+- tabele rozgrywek
+  
+```
 CREATE TABLE uzytkownicy (
     id SERIAL PRIMARY KEY,
     nick VARCHAR(20) NOT NULL,
@@ -50,3 +59,5 @@ CREATE TABLE Mecz_wyniki (
     zawodnik_id INT REFERENCES zawodnicy(zawodnik_id),
     punkty INT,
 );
+```
+    
